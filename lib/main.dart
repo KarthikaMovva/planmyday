@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:my_todo_app/pages/HomePage.dart'; 
 
 void main() {
   runApp(const MyApp());
-  print("hello world");
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -11,14 +12,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.blue[300],
-        body: Container(
-          height: 300,
-          width: 300,
-          color: Colors.blueAccent,
-        ),
-      ),
+      home: HomePage(),
+      theme: ThemeData(primarySwatch: Colors.purple), 
     );
   }
 }
